@@ -84,6 +84,7 @@ export default function ConnectPage() {
 
   return (
     <>
+      {/* Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Image
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxC9dZfgGZNR8S79g7vFKoRugReOF1WZ4IoGehFP62UluQg8yMbrfR0IGz1Gg60COfqM_mochmt9Ek-Q5Er4g47o4jFC-DFIu2JxYJyy--2CoVjHvDliYW38GSyQEuL61E2wCNr2pilOqhNY3oILs-56wkZe-5XcxsCsJKLHXOIsnY0PXn2RjP2IodFH-zK1F17g3elcsymWxNuz4P83t1XET-IKWcs4VI96SKC3i_IJA5MfAoHOLoc-OrnKj-tVHKjmkpeQckMWn"
@@ -97,6 +98,8 @@ export default function ConnectPage() {
       <Navbar />
 
       <main className="flex-grow pt-32 pb-24 px-mobile-margin max-w-[1440px] mx-auto w-full flex flex-col gap-16 md:gap-24 md:px-container-padding">
+
+        {/* Header */}
         <section className="max-w-3xl">
           <span className="font-hanken text-xs font-semibold text-secondary tracking-widest uppercase mb-4 block">
             Exclusive Advisory
@@ -108,12 +111,13 @@ export default function ConnectPage() {
           </h1>
 
           <p className="font-hanken text-[18px] leading-relaxed text-on-surface-variant max-w-xl">
-            Whether you seek a coastal sanctuary or an urban masterpiece, our
-            advisory team is at your disposal.
+            Whether you seek a coastal sanctuary or an urban masterpiece, our advisory team is at your disposal.
           </p>
         </section>
 
+        {/* Content */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+
           {/* Contact Methods */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {contactMethods.map((method) => (
@@ -121,7 +125,7 @@ export default function ConnectPage() {
                 key={method.title}
                 href={method.href}
                 target="_blank"
-                className="glass-panel rounded-xl p-8 flex items-center gap-6 group"
+                className="glass-panel rounded-xl p-8 flex items-center gap-6 group hover:scale-[1.02] transition-transform"
               >
                 <div className="w-16 h-16 rounded-full bg-white/40 flex items-center justify-center">
                   <span className="material-symbols-outlined text-[32px] text-primary">
@@ -144,6 +148,7 @@ export default function ConnectPage() {
           {/* Form */}
           <div className="lg:col-span-7">
             <div className="glass-panel rounded-xl p-8 md:p-12">
+
               <h2 className="font-manrope font-light text-[32px] md:text-[40px] text-primary mb-10">
                 Submit an Inquiry
               </h2>
@@ -158,63 +163,98 @@ export default function ConnectPage() {
                   </p>
                 </div>
               ) : (
-                <div className="flex flex-col gap-6">
-                  <input
-                    id="firstName"
-                    placeholder="First Name"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="input"
-                  />
+                <div className="flex flex-col gap-8">
 
-                  <input
-                    id="lastName"
-                    placeholder="Last Name"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="input"
-                  />
+                  {/* First Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
+                      First Name
+                    </label>
+                    <input
+                      id="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      placeholder="e.g. Omar"
+                      className="w-full bg-white/40 border border-white/60 rounded-lg px-4 py-3 text-[16px] focus:ring-2 focus:ring-secondary/50 focus:outline-none"
+                    />
+                  </div>
 
-                  <input
-                    id="contactInfo"
-                    placeholder="Email or Phone"
-                    value={formData.contactInfo}
-                    onChange={handleChange}
-                    className="input"
-                  />
+                  {/* Last Name */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
+                      Last Name
+                    </label>
+                    <input
+                      id="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      placeholder="e.g. Al-Fayed"
+                      className="w-full bg-white/40 border border-white/60 rounded-lg px-4 py-3 text-[16px] focus:ring-2 focus:ring-secondary/50 focus:outline-none"
+                    />
+                  </div>
 
-                  <select
-                    id="interest"
-                    value={formData.interest}
-                    onChange={handleChange}
-                    className="input"
-                  >
-                    <option value="">Select Interest</option>
-                    <option value="north_coast">North Coast</option>
-                    <option value="cairo">Cairo</option>
-                    <option value="new_capital">New Capital</option>
-                    <option value="other">Other</option>
-                  </select>
+                  {/* Contact */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
+                      Email or Phone
+                    </label>
+                    <input
+                      id="contactInfo"
+                      value={formData.contactInfo}
+                      onChange={handleChange}
+                      placeholder="Your contact"
+                      className="w-full bg-white/40 border border-white/60 rounded-lg px-4 py-3 text-[16px] focus:ring-2 focus:ring-secondary/50 focus:outline-none"
+                    />
+                  </div>
 
-                  <textarea
-                    id="message"
-                    placeholder="Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="input"
-                  />
+                  {/* Interest */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
+                      Area of Interest
+                    </label>
+                    <select
+                      id="interest"
+                      value={formData.interest}
+                      onChange={handleChange}
+                      className="w-full bg-white/40 border border-white/60 rounded-lg px-4 py-3 text-[16px] focus:ring-2 focus:ring-secondary/50"
+                    >
+                      <option value="">Select</option>
+                      <option value="north_coast">North Coast</option>
+                      <option value="cairo">Cairo</option>
+                      <option value="new_capital">New Capital</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
 
+                  {/* Message */}
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      placeholder="Tell us about your requirements..."
+                      className="w-full bg-white/40 border border-white/60 rounded-lg px-4 py-3 text-[16px] resize-none focus:ring-2 focus:ring-secondary/50"
+                    />
+                  </div>
+
+                  {/* Button */}
                   <button
                     onClick={handleSubmit}
                     disabled={loading}
-                    className="bg-primary text-white px-6 py-4 rounded-full"
+                    className="bg-primary text-white px-6 py-4 rounded-full font-semibold uppercase tracking-widest hover:scale-105 transition-transform"
                   >
                     {loading ? "Sending..." : "Send Inquiry"}
                   </button>
+
                 </div>
               )}
             </div>
           </div>
+
         </section>
       </main>
 
