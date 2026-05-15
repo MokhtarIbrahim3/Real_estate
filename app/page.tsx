@@ -54,8 +54,11 @@ export default function HomePage() {
                 <div className="absolute inset-2 border border-white/30 rounded-lg pointer-events-none transition-all duration-500 group-hover:inset-3 group-hover:border-secondary/30" />
                 <div className="relative w-full h-full rounded-lg overflow-hidden bg-surface-variant">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuALJWYDx1Aly2_8byp2WnysDw6TyZCrwLLi1ca5IK2RxfSduC6_Ppqa8iNSuLbcqRrIJw-RxTWOfpi7_APWgMgEouF2xUvRjEEm6E6leSzv4V5f38FMUd1_x0n_Csy2jDY2GRqyi-0ybC6eana2UfgXb5iQM9Bl0Ve75H8Ez7zX9_jZuyy4aYcMMll9rqpG_Ek9cBPTt-T8CBTkmoBI7B1e394jJxZ97dt3JwLdNVu-aFP-wxNCMJLwZizmMrs8-5P_nBQQHDXIgHbo"
-                    alt="Mokhtar Ibrahim" fill className="object-cover transition-transform duration-700 group-hover:scale-105" unoptimized />
+                    src="/images/bg.jpg"
+                    alt="Mokhtar Ibrahim" 
+                    fill
+                    className="object-cover opacity-[0.15] blur-[40px] scale-110"
+                  />
                 </div>
                 <div className="absolute bottom-10 left-10 glass-panel px-6 py-3 rounded-full flex items-center gap-3 shadow-lg transition-transform duration-500 group-hover:-translate-y-2">
                   <div className="w-2 h-2 rounded-full bg-secondary" />
