@@ -8,15 +8,40 @@ export const metadata: Metadata = {
 };
 
 const testimonials = [
-  { id: 1, quote: "شهادة حق، مختار كان امين معايا الصراحة انا اتعاملت مع brokers كتير كانو عايزين يبيع و وخلاص بس هو الصراحة كان بيختارلي المناسب ليا بغض النظر عن العمولة وكدا", name: "Karim Al-Sayed", property: null, featured: true },
-  { id: 2, quote: "بصراحة مختار اشتغل معايا بضمير. فيلا الساحل اللي رشحهالي رجعتلي ROI حلو اوي الحمدلله انا مكنتش عامل حسابي عليها ساعتها هو اللي اقنعني بيها اصلا", name: "Layla Mansour", property: "North Coast Chalet", featured: false },
-  { id: 3, quote: "مختار ساعدني جداً اول مرجعت من لندن كنت تايه ومش عارف الدنيا فالسوق عاملة ازاي وكان هيتنصب عليا كتير بس حد رشحلي مختار وقالي انه واثق فيه وفعلا جابلي حاجة احسن من اللي كنت عايزها وبسعر اقل كمان", name: "Tariq Hassan", property: "Zamalek Penthouse", featured: false },
-  { id: 4, quote: "أكتر حاجة عجبتني في التعامل مع مختار هي الأمانة. الحقيقة مكنش عايز يبيع لي وخلاص، بالعكس، وجهني صح وخلاني أصرف نظر عن وحدات تانية كنت فاكرها كويسة بس هو وضح لي عيوبها وجابلي حاجة احسن وبسعر اقل كمان", name: "The Youssef Family", property: "Alexandria Estate", featured: true },
+  { 
+    id: 1, 
+    quote: "شهادة حق، مختار كان أمين معايا جداً.. اتعاملت مع brokers كتير كانوا عايزين يبيعوا وخلاص، بس هو الصراحة كان بيختار لي المناسب ليا بغض النظر عن أي حاجة تانية.", 
+    name: "Karim Al-Sayed", 
+    property: null, 
+    featured: true 
+  },
+  { 
+    id: 2, 
+    quote: "بصراحة مختار اشتغل معايا بضمير. فيلا الساحل اللي رشحها لي رجعت لي ROI حلو أوي الحمد لله، أنا مكنتش عامل حسابي عليها وقتها هو اللي أقنعني بيها.", 
+    name: "Layla Mansour", 
+    property: "North Coast Chalet", 
+    featured: false 
+  },
+  { 
+    id: 3, 
+    quote: "مختار ساعدني جداً أول ما رجعت من لندن كنت تايه ومش عارف السوق عامل ازاي، بس حد رشح لي مختار وقالي إنه واثق جداً وفاهم، وفعلاً جاب لي حاجة أحسن من اللي كنت عايزها وبسعر أقل كمان.", 
+    name: "Tariq Hassan", 
+    property: "Zamalek Penthouse", 
+    featured: false 
+  },
+  { 
+    id: 4, 
+    quote: "أكتر حاجة عجبتني في التعامل مع مختار هي الأمانة. الحقيقة مكنش عايز يبيع لي وخلاص، بالعكس، وجهني صح وخلاني أصرف نظر عن وحدات تانية كنت فاكرها كويسة بس هو وضح لي عيوبها.", 
+    name: "The Youssef Family", 
+    property: "Alexandria Estate", 
+    featured: true 
+  },
 ];
 
 export default function ClientStoriesPage() {
   return (
     <>
+      {/* الخلفيات الملونة (Blur effect) */}
       <div className="fixed w-[600px] h-[600px] rounded-full top-[-100px] left-[-200px] z-[-1] pointer-events-none" style={{ background: "rgba(203,219,245,0.6)", filter: "blur(120px)" }} />
       <div className="fixed w-[800px] h-[800px] rounded-full top-[40%] right-[-300px] z-[-1] pointer-events-none" style={{ background: "rgba(255,222,165,0.24)", filter: "blur(120px)" }} />
       <div className="fixed w-[500px] h-[500px] rounded-full bottom-[-100px] left-[20%] z-[-1] pointer-events-none" style={{ background: "rgba(211,228,254,0.6)", filter: "blur(120px)" }} />

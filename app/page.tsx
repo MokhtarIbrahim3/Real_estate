@@ -1,24 +1,32 @@
-import type { Metadata } from "next";
+"use client";
+
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export const metadata: Metadata = { title: "Home" };
+// ملاحظة: Metadata تُعرف عادةً في ملف layout أو page كـ Server Component، 
+// إذا كان هذا الملف "use client" يفضل نقل الـ metadata لملف منفصل أو حذفها من هنا.
 
 export default function HomePage() {
   return (
     <>
+      {/* Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Image
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxC9dZfgGZNR8S79g7vFKoRugReOF1WZ4IoGehFP62UluQg8yMbrfR0IGz1Gg60COfqM_mochmt9Ek-Q5Er4g47o4jFC-DFIu2JxYJyy--2CoVjHvDliYW38GSyQEuL61E2wCNr2pilOqhNY3oILs-56wkZe-5XcxsCsJKLHXOIsnY0PXn2RjP2IodFH-zK1F17g3elcsymWxNuz4P83t1XET-IKWcs4VI96SKC3i_IJA5MfAoHOLoc-OrnKj-tVHKjmkpeQckMWn"
-          alt="Background" fill className="object-cover opacity-[0.15] blur-[40px] scale-110" priority unoptimized />
+          src="/images/bg-hero.jpg" 
+          alt="Background" 
+          fill 
+          className="object-cover opacity-[0.03] blur-[15px] scale-105" 
+          priority 
+        />
       </div>
 
       <Navbar />
 
       <main className="pt-32 pb-24">
-        {/* Hero */}
+        {/* Hero Section */}
         <section className="max-w-[1440px] mx-auto px-mobile-margin md:px-container-padding min-h-[819px] flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center w-full">
             <div className="flex flex-col z-10 relative">
@@ -27,7 +35,7 @@ export default function HomePage() {
                 Exclusive Advisory
               </span>
               <h1 className="font-manrope font-thin text-5xl sm:text-6xl lg:text-[64px] text-primary mb-6 leading-[1.1] tracking-[-0.02em]">
-                Curating Egypt&apos;s Most{" "}
+                Curating Egypt's Most{" "}
                 <br className="hidden lg:block" />
                 <span className="italic font-light">Exclusive Addresses</span>
               </h1>
@@ -49,15 +57,17 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Profile Image Section */}
             <div className="relative w-full mt-16 lg:mt-0 flex justify-center lg:justify-end">
               <div className="glass-panel tilt-card relative w-full max-w-md aspect-[3/4] rounded-xl p-4 flex flex-col items-center justify-center group overflow-hidden">
                 <div className="absolute inset-2 border border-white/30 rounded-lg pointer-events-none transition-all duration-500 group-hover:inset-3 group-hover:border-secondary/30" />
-                <div className="relative w-full h-full min-h-[400px] rounded-lg overflow-hidden bg-surface-variant">
+                <div className="relative w-full h-full rounded-lg overflow-hidden bg-surface-variant">
                   <Image
-                    src="/images/mokhtar.jpg"
+                    src="/images/mokhtar.jpg" // تم تحديث المسار ليكون باسمك
                     alt="Mokhtar Ibrahim"
                     fill
                     className="object-cover"
+                    priority
                   />
                 </div>
                 <div className="absolute bottom-10 left-10 glass-panel px-6 py-3 rounded-full flex items-center gap-3 shadow-lg transition-transform duration-500 group-hover:-translate-y-2">
@@ -85,10 +95,10 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
-            {/* Bento 1 */}
+            {/* Bento 1 - Coastal */}
             <Link href="/expertise" className="md:col-span-2 glass-panel rounded-xl overflow-hidden group tilt-card relative cursor-pointer block">
-              <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2GQDShmrg6oZNOAPhq4bHcLJtjxJkc4aucc1vhg0BoRR1mDkrcLFRxg_vDU_0dOez0ubZmZj5w0dGjXxoEd1Q9SfuExSr6pK_a0aMoRY5q25gECO_3NODrHD1QmB_9Maa6KQOQg9Wl-99k15JacleTSdzZrZSwuMt5fzTs1b5VG_imiurMCJMRCTrzL1NWFguTeGOf3bCffVzJSYE4SGlNRWOPBwYaFW-3n-fZHBuXokFjpNrAweGm9uBCSdMV7b4I57DGxjmGzTQ"
-                alt="North Coast Villa" fill className="object-cover opacity-80 mix-blend-overlay transition-transform duration-700 group-hover:scale-110" unoptimized />
+              <Image src="/images/coastal-villa.jpg" 
+                alt="North Coast Villa" fill className="object-cover opacity-80 mix-blend-overlay transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
               <div className="absolute bottom-0 left-0 p-glass-padding">
                 <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full font-hanken text-xs font-semibold text-white mb-3 border border-white/30 uppercase tracking-widest">
@@ -100,7 +110,7 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Bento 2 */}
+            {/* Bento 2 - New Capital */}
             <Link href="/expertise" className="glass-panel rounded-xl p-glass-padding flex flex-col justify-between tilt-card cursor-pointer group block">
               <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center mb-4 group-hover:bg-secondary/20 transition-colors">
                 <span className="material-symbols-outlined text-secondary">domain</span>
@@ -123,15 +133,15 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Bento 4 */}
+            {/* Bento 4 - Cairo & Alex */}
             <Link href="/expertise" className="md:col-span-2 glass-panel rounded-xl overflow-hidden group tilt-card relative cursor-pointer block">
-              <Image src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtSKfPigXuUYwEeG9t_LfehH1E-7E-lJXMCHI-kO4r1UrevIGrc8j9T3Cb_3r5hmo82_DBsQjz9mlPCQC902lXs7ksNwNN2_5h6Kat_qDmNB4XjEqbaeNZkTqJhbHLuoglFwk5Mh7NeHlCYDqMtQkJANHMGEut9I2xfWcibyrW0fBUUtDqkrlZ30SZYaHbUTy66hiNKJGOQI0qOHNXrEYQnGL6pw-mmFfsIw_URs0egCqG2DMRdF3mG6wrnso09eXr4WUwQ79zmT9j"
-                alt="Cairo Skyline" fill className="object-cover opacity-70 mix-blend-multiply transition-transform duration-700 group-hover:scale-110" unoptimized />
+              <Image src="/images/cairo-skyline.jpg" 
+                alt="Cairo Skyline" fill className="object-cover opacity-70 mix-blend-multiply transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/40 to-transparent" />
               <div className="absolute top-1/2 -translate-y-1/2 left-0 p-glass-padding max-w-md">
-                <h3 className="font-manrope font-medium text-[24px] text-primary mb-3">Cairo &amp; Alexandria</h3>
+                <h3 className="font-manrope font-medium text-[24px] text-primary mb-3">Cairo & Alexandria</h3>
                 <p className="font-hanken text-[16px] leading-relaxed text-on-surface-variant mb-6">
-                  From famous heritage properties to ultra-modern villas offering panoramic views of the most luxurious locations in Cairo and Alexandria.
+                  From heritage properties to ultra-modern villas offering panoramic views across Egypt's urban centers.
                 </p>
               </div>
             </Link>

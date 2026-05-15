@@ -12,7 +12,7 @@ const contactMethods = [
     icon: "chat",
     title: "WhatsApp",
     subtitle: "Instant, discreet communication.",
-    href: "https://wa.me/201213082110",
+    href: "https://wa.me/201213082110", 
   },
   {
     icon: "call",
@@ -24,7 +24,7 @@ const contactMethods = [
     icon: "work",
     title: "LinkedIn",
     subtitle: "Professional network & insights.",
-    href: "https://www.linkedin.com/in/mokhtar-ibrahim-alex/",
+    href: "https://www.linkedin.com/in/mokhtar-ibrahim/", // تم تحديث الرابط لاسمك
   },
 ];
 
@@ -87,11 +87,10 @@ export default function ConnectPage() {
       {/* Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Image
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxC9dZfgGZNR8S79g7vFKoRugReOF1WZ4IoGehFP62UluQg8yMbrfR0IGz1Gg60COfqM_mochmt9Ek-Q5Er4g47o4jFC-DFIu2JxYJyy--2CoVjHvDliYW38GSyQEuL61E2wCNr2pilOqhNY3oILs-56wkZe-5XcxsCsJKLHXOIsnY0PXn2RjP2IodFH-zK1F17g3elcsymWxNuz4P83t1XET-IKWcs4VI96SKC3i_IJA5MfAoHOLoc-OrnKj-tVHKjmkpeQckMWn"
+          src="/images/bg-hero.jpg" 
           alt="Background"
           fill
-          className="object-cover opacity-[0.15] blur-[40px] scale-110"
-          unoptimized
+          className="object-cover opacity-[0.03] blur-[15px] scale-105"
         />
       </div>
 
@@ -111,7 +110,7 @@ export default function ConnectPage() {
           </h1>
 
           <p className="font-hanken text-[18px] leading-relaxed text-on-surface-variant max-w-xl">
-            Whether you seek a coastal sanctuary or an urban masterpiece, our advisory team is at your disposal.
+            Whether you seek a coastal sanctuary or an urban masterpiece, Mokhtar Ibrahim's advisory is at your disposal.
           </p>
         </section>
 
@@ -159,13 +158,11 @@ export default function ConnectPage() {
                     Inquiry Sent ✅
                   </h3>
                   <p className="text-on-surface-variant">
-                    We will contact you soon.
+                    Mokhtar will contact you soon.
                   </p>
                 </div>
               ) : (
                 <div className="flex flex-col gap-8">
-
-                  {/* First Name */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
                       First Name
@@ -179,7 +176,6 @@ export default function ConnectPage() {
                     />
                   </div>
 
-                  {/* Last Name */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
                       Last Name
@@ -193,7 +189,6 @@ export default function ConnectPage() {
                     />
                   </div>
 
-                  {/* Contact */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
                       Email or Phone
@@ -207,7 +202,6 @@ export default function ConnectPage() {
                     />
                   </div>
 
-                  {/* Interest */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
                       Area of Interest
@@ -226,7 +220,6 @@ export default function ConnectPage() {
                     </select>
                   </div>
 
-                  {/* Message */}
                   <div className="flex flex-col gap-2">
                     <label className="text-xs font-semibold text-secondary uppercase tracking-widest">
                       Message
@@ -241,7 +234,6 @@ export default function ConnectPage() {
                     />
                   </div>
 
-                  {/* Button */}
                   <button
                     onClick={handleSubmit}
                     disabled={loading}
@@ -249,12 +241,10 @@ export default function ConnectPage() {
                   >
                     {loading ? "Sending..." : "Send Inquiry"}
                   </button>
-
                 </div>
               )}
             </div>
           </div>
-
         </section>
       </main>
 

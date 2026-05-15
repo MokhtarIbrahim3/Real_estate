@@ -18,6 +18,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl border-b border-white/20 shadow-sm transition-all duration-500 hover:backdrop-blur-3xl">
       <div className="flex justify-between items-center px-mobile-margin md:px-container-padding h-20 w-full max-w-[1440px] mx-auto">
+        {/* تم استعادة اسمك هنا */}
         <Link href="/" className="font-manrope font-medium text-2xl tracking-tighter text-primary">
           Mokhtar Ibrahim
         </Link>

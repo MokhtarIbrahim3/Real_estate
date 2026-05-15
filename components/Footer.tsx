@@ -5,6 +5,7 @@ export default function Footer() {
     <footer className="bg-surface-bright w-full border-t border-outline-variant/30 relative z-10">
       <div className="flex flex-col md:flex-row justify-between items-center py-12 px-mobile-margin md:px-container-padding w-full max-w-[1440px] mx-auto gap-6">
         <div className="flex flex-col items-center md:items-start">
+          {/* استعادة اسمك هنا */}
           <span className="font-manrope font-medium text-2xl text-primary mb-2">Mokhtar Ibrahim</span>
           <span className="font-hanken text-xs font-semibold tracking-widest text-primary/70 uppercase">
             © {new Date().getFullYear()} Real Estate Expert Egypt. Curated Excellence.

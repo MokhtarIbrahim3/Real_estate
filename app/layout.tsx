@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Cairo real estate",
     "Alexandria properties",
     "New Capital Egypt",
-    "Mokhtar Ibrahim",
+    "Mokhtar Ibrahim", // إعادة تعيين الكلمات المفتاحية لاسمك
   ],
   openGraph: {
     title: "Mokhtar Ibrahim | Luxury Real Estate Expert Egypt",
