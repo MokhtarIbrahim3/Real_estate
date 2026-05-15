@@ -54,7 +54,7 @@ export default function HomePage() {
                 <div className="absolute inset-2 border border-white/30 rounded-lg pointer-events-none transition-all duration-500 group-hover:inset-3 group-hover:border-secondary/30" />
                 <div className="relative w-full h-full rounded-lg overflow-hidden bg-surface-variant">
                   <Image
-                    src="/images/bg.jpg"
+                    src="public/images/mokhtar.jpg"
                     alt="Mokhtar Ibrahim" 
                     fill
                     className="object-cover opacity-[0.15] blur-[40px] scale-110"
