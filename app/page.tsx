@@ -15,7 +15,7 @@ export default function HomePage() {
       {/* Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Image
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxC9dZfgGZNR8S79g7vFKoRugReOF1WZ4IoGehFP62UluQg8yMbrfR0IGz1Gg60COfqM_mochmt9Ek-Q5Er4g47o4jFC-DFIu2JxYJyy--2CoVjHvDliYW38GSyQEuL61E2wCNr2pilOqhNY3oILs-56wkZe-5XcxsCsJKLHXOIsnY0PXn2RjP2IodFH-zK1F17g3elcsymWxNuz4P83t1XET-IKWcs4VI96SKC3i_IJA5MfAoHOLoc-OrnKj-tVHKjmkpeQckMWn" 
+          src="/images/bg-hero.png" 
           alt="Background" 
           fill 
           className="object-cover opacity-[0.03] blur-[15px] scale-105" 
@@ -97,7 +97,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
             {/* Bento 1 - Coastal */}
             <Link href="/expertise" className="md:col-span-2 glass-panel rounded-xl overflow-hidden group tilt-card relative cursor-pointer block">
-              <Image src="/images/coastal-villa.jpg" 
+              <Image src="/images/coastal-villa.png" 
                 alt="North Coast Villa" fill className="object-cover opacity-80 mix-blend-overlay transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
               <div className="absolute bottom-0 left-0 p-glass-padding">
@@ -135,7 +135,7 @@ export default function HomePage() {
 
             {/* Bento 4 - Cairo & Alex */}
             <Link href="/expertise" className="md:col-span-2 glass-panel rounded-xl overflow-hidden group tilt-card relative cursor-pointer block">
-              <Image src="/images/cairo-skyline.jpg" 
+              <Image src="/images/cairo-skyline.png" 
                 alt="Cairo Skyline" fill className="object-cover opacity-70 mix-blend-multiply transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/40 to-transparent" />
               <div className="absolute top-1/2 -translate-y-1/2 left-0 p-glass-padding max-w-md">
