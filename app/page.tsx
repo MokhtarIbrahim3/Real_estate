@@ -15,7 +15,7 @@ export default function HomePage() {
       {/* Background */}
       <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
         <Image
-          src="/images/bg-hero.jpg" 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOxC9dZfgGZNR8S79g7vFKoRugReOF1WZ4IoGehFP62UluQg8yMbrfR0IGz1Gg60COfqM_mochmt9Ek-Q5Er4g47o4jFC-DFIu2JxYJyy--2CoVjHvDliYW38GSyQEuL61E2wCNr2pilOqhNY3oILs-56wkZe-5XcxsCsJKLHXOIsnY0PXn2RjP2IodFH-zK1F17g3elcsymWxNuz4P83t1XET-IKWcs4VI96SKC3i_IJA5MfAoHOLoc-OrnKj-tVHKjmkpeQckMWn" 
           alt="Background" 
           fill 
           className="object-cover opacity-[0.03] blur-[15px] scale-105" 
